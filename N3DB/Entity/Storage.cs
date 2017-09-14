@@ -12,7 +12,9 @@ namespace N3DB.Entity
     {
         [Key]
         public int StorageId { get; set; }
+        [Required]
         public int StoreId { get; set; }
+        [Required]
         public int ItemId { get; set; }
         public int? ItemSizeId { get; set; }
         public int? ItemColorId { get; set; }

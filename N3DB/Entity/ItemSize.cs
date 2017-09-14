@@ -12,7 +12,9 @@ namespace N3DB.Entity
     {
         [Key]
         public int ItemSizeId { get; set; }
+        [Required]
         public int ItemId { get; set; }
+        [Required]
         public string Size { get; set; }
         public string Desc { get; set; }
 

@@ -12,8 +12,10 @@ namespace N3DB.Entity
     {
         [Key]
         public int AdPictureId { get; set; }
+        [Required]
         public string Title { get; set; }
         public string Desc { get; set; }
+        [Required]
         public string Url { get; set; }
         public string link { get; set; }
         public string type { get; set; }

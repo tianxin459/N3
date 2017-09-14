@@ -12,7 +12,10 @@ namespace N3DB.Entity
     {
         [Key]
         public int StoreId { get; set; }
+        [Required]
+        public string StoreName { get; set; }
         public string Address { get; set; }
+        [Required]
         public string Phone { get; set; }
         public string Coordinates { get; set; }
 

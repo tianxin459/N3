@@ -12,8 +12,10 @@ namespace N3DB.Entity
     {
         [Key]
         public int ItemId { get; set; }
+        [Required]
         public string Title { get; set; }
         public string Desc { get; set; }
+        [Required]
         public decimal Price { get; set; }
         public string ImgUrl { get; set; }
         //common columns

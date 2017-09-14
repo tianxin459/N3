@@ -12,6 +12,7 @@ namespace N3DB.Entity
     {
         [Key]
         public int ArticleId { get; set; }
+        [Required]
         public string Title { get; set; }
         public string Content { get; set; }
         public string MimeUrl { get; set; }
