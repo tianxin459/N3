@@ -11,6 +11,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "N3DB", "..\N3DB\N3DB.csproj
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "N3DBInit", "..\N3DBInit\N3DBInit.csproj", "{3D189FA0-D43A-4731-843D-21018FA44EB2}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tools", "Tools", "{99AF5E82-4764-4427-BE30-68C67DE1415C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataCollector", "DataCollector\DataCollector.csproj", "{2B4AF634-A957-44F4-93D7-4FEC979A7593}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -29,6 +33,10 @@ Global
 		{3D189FA0-D43A-4731-843D-21018FA44EB2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3D189FA0-D43A-4731-843D-21018FA44EB2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3D189FA0-D43A-4731-843D-21018FA44EB2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2B4AF634-A957-44F4-93D7-4FEC979A7593}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2B4AF634-A957-44F4-93D7-4FEC979A7593}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2B4AF634-A957-44F4-93D7-4FEC979A7593}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2B4AF634-A957-44F4-93D7-4FEC979A7593}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -36,5 +44,6 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{01C4554D-9AF5-4525-ACBF-B26F0F36D190} = {66DC10EE-F5CF-4270-A865-9AA5DA023AD2}
 		{3D189FA0-D43A-4731-843D-21018FA44EB2} = {66DC10EE-F5CF-4270-A865-9AA5DA023AD2}
+		{2B4AF634-A957-44F4-93D7-4FEC979A7593} = {99AF5E82-4764-4427-BE30-68C67DE1415C}
 	EndGlobalSection
 EndGlobal

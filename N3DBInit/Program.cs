@@ -1,4 +1,5 @@
-﻿using N3DB;
+﻿using DataCollector;
+using N3DB;
 using N3DB.Entity;
 using System;
 using System.Collections.Generic;
@@ -14,6 +15,10 @@ namespace N3DBInit
         static void Main(string[] args)
         {
             Console.WriteLine("Data initializing");
+
+            WebUtil wu = new WebUtil();
+            wu.OpenSite("http://wenzhaizhongwen.zazhi.com/");
+            N3DataInitializer.articles = wu.Articles;
 #if DEBUG
             Database.SetInitializer(new DataInitializerForce());
 #else

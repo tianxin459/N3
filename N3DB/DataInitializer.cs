@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 namespace N3DB
 {
     public static class N3DataInitializer{
+        public static List<Article> articles { get; set;} = new List<Article>();
         public static void Seed(N3Context context)
         {
             #region Users
@@ -34,6 +35,12 @@ namespace N3DB
             };
             itemColors.ForEach(x => context.ItemColors.Add(x));
             #endregion
+
+
+            #region Articles
+            articles.ForEach(x => context.Articles.Add(x));
+            #endregion
+
 
             context.SaveChanges();
         }
