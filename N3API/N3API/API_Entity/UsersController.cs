@@ -19,9 +19,9 @@ namespace N3API.API_Entity
         private N3Context db = new N3Context();
 
         // GET: api/Users
-        public IQueryable<User> GetUsers()
+        public IEnumerable<User> GetUsers()
         {
-            return db.Users;
+            return db.Users.ToList();
         }
 
         // GET: api/Users/5

@@ -19,9 +19,9 @@ namespace N3API.API_Entity
         private N3Context db = new N3Context();
 
         // GET: api/AdPictures
-        public IQueryable<AdPicture> GetAdPictures()
+        public IEnumerable<AdPicture> GetAdPictures()
         {
-            return db.AdPictures;
+            return db.AdPictures.ToList();
         }
 
         // GET: api/AdPictures/5

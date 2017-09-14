@@ -19,9 +19,9 @@ namespace N3API.API_Entity
         private N3Context db = new N3Context();
 
         // GET: api/ItemSizes
-        public IQueryable<ItemSize> GetItemSizes()
+        public IEnumerable<ItemSize> GetItemSizes()
         {
-            return db.ItemSizes;
+            return db.ItemSizes.ToList();
         }
 
         // GET: api/ItemSizes/5

@@ -19,9 +19,9 @@ namespace N3API.API_Entity
         private N3Context db = new N3Context();
 
         // GET: api/ItemColors
-        public IQueryable<ItemColor> GetItemColors()
+        public IEnumerable<ItemColor> GetItemColors()
         {
-            return db.ItemColors;
+            return db.ItemColors.ToList();
         }
 
         // GET: api/ItemColors/5
