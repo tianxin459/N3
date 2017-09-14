@@ -28,8 +28,6 @@ namespace N3API
                         .ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore;
 
 #if DEBUG
-            Database.SetInitializer(new DataInitializerForce());
-#else
             Database.SetInitializer(new DataInitializer());
 #endif
         }
