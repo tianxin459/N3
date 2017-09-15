@@ -16,11 +16,13 @@ using Microsoft.Owin.Security.OAuth;
 using N3API.Models;
 using N3API.Providers;
 using N3API.Results;
+using System.Web.Http.Description;
 
 namespace N3API.Controllers
 {
     [Authorize]
     [RoutePrefix("api/Account")]
+    [ApiExplorerSettings(IgnoreApi = true)]
     public class AccountController : ApiController
     {
         private const string LocalLoginProvider = "Local";

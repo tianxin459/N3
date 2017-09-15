@@ -5,10 +5,12 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using System.Web.Http.Description;
 
 namespace N3API.Controllers
 {
     //[Authorize]
+    [ApiExplorerSettings(IgnoreApi = true)]
     public class ValuesController : ApiController
     {
         // GET api/values

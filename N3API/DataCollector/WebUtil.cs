@@ -1,6 +1,6 @@
 ﻿using N3DB.Entity;
 using OpenQA.Selenium;
-using OpenQA.Selenium.Chrome;
+using OpenQA.Selenium.PhantomJS;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -43,7 +43,7 @@ namespace DataCollector
         {
 
             IWebDriver driver;
-            driver = new ChromeDriver();
+            driver = new PhantomJSDriver();
 
             List<IWebElement> titleElement = new List<IWebElement>();
             List<Article> articles = new List<Article>();

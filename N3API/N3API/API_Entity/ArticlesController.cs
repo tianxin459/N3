@@ -14,6 +14,9 @@ using N3DB.Entity;
 
 namespace N3API.API_Entity
 {
+    /// <summary>
+    /// 2nd page that display articles 
+    /// </summary>
     public class ArticlesController : ApiController
     {
         private N3Context db = new N3Context();
