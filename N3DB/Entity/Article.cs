@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
+using System.Runtime.Serialization;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -26,6 +27,7 @@ namespace N3DB.Entity
         public bool IsDelete { get; set; } = false;
 
         //navigation
+        [IgnoreDataMember]
         public virtual Item Item { get; set; }
     }
 }
