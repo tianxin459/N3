@@ -9,7 +9,8 @@ using System.Threading.Tasks;
 namespace N3DB
 {
     public static class N3DataInitializer{
-        public static List<Article> articles { get; set;} = new List<Article>();
+        public static List<Article> Articles { get; set;} = new List<Article>();
+        public static List<Item> Items { get; set; } = new List<Item>();
         public static void Seed(N3Context context)
         {
             #region Users
@@ -22,27 +23,28 @@ namespace N3DB
 
 
             #region Items
-            var items = new List<Item>() {
-                new Item() { Title="item1", Desc="desc1"},
-                new Item() { Title="item2", Desc="desc2"}
-            };
-            items.ForEach(x => context.Items.Add(x));
-
+            //var items = new List<Item>() {
+            //    new Item() { Title="item1", Desc="desc1"},
+            //    new Item() { Title="item2", Desc="desc2"}
+            //};
+            //items.ForEach(x => context.Items.Add(x));
+            Items.ForEach(x => context.Items.Add(x));
 
             var itemColors = new List<ItemColor>() {
-                new ItemColor() { Color="Red", Desc="desc1", Item = items[0]},
-                new ItemColor() { Color="White", Desc="desc2", Item = items[0]}
+                new ItemColor() { Color="Red", Desc="desc1", Item = Items[0]},
+                new ItemColor() { Color="White", Desc="desc2", Item = Items[0]}
             };
             itemColors.ForEach(x => context.ItemColors.Add(x));
             #endregion
 
-
             #region Articles
-            articles.ForEach(x => context.Articles.Add(x));
+            Articles.ForEach(x => context.Articles.Add(x));
             #endregion
 
 
+            Console.WriteLine("====================Start Saving==============================");
             context.SaveChanges();
+            Console.WriteLine("====================Saving Complete==============================");
         }
     }
 

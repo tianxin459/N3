@@ -18,7 +18,9 @@ namespace N3DBInit
 
             WebUtil wu = new WebUtil();
             wu.OpenSite("http://wenzhaizhongwen.zazhi.com/");
-            N3DataInitializer.articles = wu.Articles;
+            wu.CollectDataForItems();
+            N3DataInitializer.Articles = wu.Articles;
+            N3DataInitializer.Items = wu.Items;
 #if DEBUG
             Database.SetInitializer(new DataInitializerForce());
 #else
